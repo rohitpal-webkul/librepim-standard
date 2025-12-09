@@ -1,7 +1,11 @@
-Akeneo PIM
+LibrePIM - Official Akeneo PIM Community Edition Fork
 
 The Open Software License version 3.0
 
+Copyright (c) 2024, LibrePIM Contributors
 Copyright (c) 2013, Akeneo SAS.
 
 Full license is at: http://opensource.org/licenses/OSL-3.0
+
+This software is a fork of Akeneo PIM Community Edition and is provided under the same license.
+For more information about LibrePIM, visit: https://github.com/libre-pim

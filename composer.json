@@ -1,14 +1,26 @@
 {
-  "name": "akeneo/pim-community-standard",
-  "description": "The \"Akeneo Community Standard Edition\" distribution",
+  "name": "libre-pim/librepim-standard",
+  "description": "LibrePIM - Official Akeneo PIM Community Edition Fork | Security patches, bug fixes, performance improvements, and more.",
   "license": "OSL-3.0",
   "type": "project",
   "authors": [
+    {
+      "name": "LibrePIM Community",
+      "homepage": "https://github.com/libre-pim/librepim-standard"
+    },
     {
       "name": "Akeneo",
       "homepage": "http://www.akeneo.com"
     }
   ],
+  "keywords": [
+    "pim",
+    "product-information-management",
+    "akeneo",
+    "fork",
+    "community"
+  ],
+  "homepage": "https://github.com/libre-pim/librepim-standard",
   "autoload": {
     "psr-0": {
       "": "src/"
@@ -17,11 +29,11 @@
       "Pim\\Upgrade\\": "upgrades/"
     },
     "exclude-from-classmap": [
-      "vendor/akeneo/pim-community-dev/src/Kernel.php"
+      "vendor/libre-pim/librepim-dev/src/Kernel.php"
     ]
   },
   "require": {
-    "akeneo/pim-community-dev": "dev-master"
+    "libre-pim/librepim-dev": "master"
   },
   "require-dev": {
     "symfony/debug-bundle": "^5.4.0",
@@ -29,13 +41,13 @@
   },
   "scripts": {
     "post-update-cmd": [
-      "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
+      "vendor/libre-pim/librepim-dev/std-build/install-required-files.sh"
     ],
     "post-install-cmd": [
-      "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
+      "vendor/libre-pim/librepim-dev/std-build/install-required-files.sh"
     ],
     "post-create-project-cmd": [
-      "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
+      "vendor/libre-pim/librepim-dev/std-build/install-required-files.sh"
     ]
   },
   "minimum-stability": "stable",
