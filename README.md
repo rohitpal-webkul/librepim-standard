@@ -1,94 +1,133 @@
-LibrePIM - Official Akeneo PIM Community Edition Fork
-======================================================
+# **LibrePIM – Community-Maintained Fork of the Akeneo PIM Community Edition**
 
-Welcome to LibrePIM - A Community-Driven Fork of Akeneo PIM
+Welcome to **LibrePIM**, an independent and community-driven fork of the **Akeneo PIM Community Edition**.
+LibrePIM aims to provide long-term maintenance, stability, and compatibility for teams relying on the open-source PIM ecosystem.
 
-**LibrePIM** is an official community fork of Akeneo PIM Community Edition, dedicated to providing:
-- Security patches and bug fixes
-- Performance improvements
-- Community-driven development
-- Easy migration path from Akeneo PIM Community Edition
+LibrePIM focuses on:
 
-This repository is used to create a new PIM project based on LibrePIM (forked from Akeneo PIM).
+* Security updates and bug fixes
+* Performance and dependency improvements
+* Community contributions and transparency
+* A familiar and compatible migration path from Akeneo PIM Community Edition
 
-### Contributing & Development
+This repository helps you create a new PIM project based on LibrePIM.
 
-For development and feature requests, please visit: https://github.com/libre-pim/librepim-dev
+---
 
-If you want to contribute to LibrePIM, you can fork the repository https://github.com/libre-pim/librepim-dev and submit a pull request.
+## **Contributing & Development**
 
-To report issues or suggest improvements, please use: https://github.com/libre-pim/librepim-dev/issues
+Development happens in the main repository:
+🔗 [https://github.com/libre-pim/librepim-dev](https://github.com/libre-pim/librepim-dev)
 
-Installation instructions
--------------------------
+If you would like to contribute:
 
-### Development Installation with Docker
+* Fork [https://github.com/libre-pim/librepim-dev](https://github.com/libre-pim/librepim-dev)
+* Submit a pull request with your changes
+* Open issues or feature requests here: [https://github.com/libre-pim/librepim-dev/issues](https://github.com/libre-pim/librepim-dev/issues)
 
-## Requirements
- - Docker 19+
- - docker-compose >= 1.24
- - make
+Community participation is welcome and appreciated.
 
-## Creating a project and starting the PIM
-The following steps will install LibrePIM in the current directory (must be empty) and launch it from there:
+---
+
+# **Installation Instructions**
+
+## Development Installation with Docker
+
+### **Requirements**
+
+* Docker 19+
+* docker-compose ≥ 1.24
+* make
+
+### **Create a project and start LibrePIM**
+
+Run the following commands in an **empty directory**:
 
 ```bash
-$ docker run -u www-data -v $(pwd):/srv/pim -w /srv/pim --rm akeneo/pim-php-dev:8.1 \
+docker run -u www-data -v $(pwd):/srv/pim -w /srv/pim --rm akeneo/pim-php-dev:8.1 \
     php /usr/local/bin/composer create-project --prefer-dist \
     libre-pim/librepim-standard /srv/pim "master"
 ```
-```
-$ make
-
-```
-
-The PIM will be available on http://localhost:8080/, with `admin/admin` as default credentials.
-
-To shutdown your PIM: `make down`
-
-### Installation without Docker
-
 
 ```bash
-$ php /usr/local/bin/composer create-project --prefer-dist libre-pim/librepim-standard /srv/pim "master"
+make
 ```
 
-You will need to change the `.env` file to configure the access to your MySQL and ES server.
+LibrePIM will be available at:
+➡️ **[http://localhost:8080/](http://localhost:8080/)**
+Default credentials: **admin / admin**
 
-Once done, you can run:
+To stop the PIM:
 
 ```
-$ NO_DOCKER=true make
+make down
 ```
 
-For more details, please follow https://docs.akeneo.com/master/install_pim
+---
 
-### Migrating from Akeneo PIM Community Edition
+## **Installation Without Docker**
 
-If you're currently using Akeneo PIM Community Edition and want to migrate to LibrePIM, the process is straightforward as LibrePIM maintains compatibility with Akeneo PIM Community Edition. Please refer to the migration guide in the documentation.
+```bash
+php /usr/local/bin/composer create-project --prefer-dist \
+    libre-pim/librepim-standard /srv/pim "master"
+```
 
-Upgrade instructions
---------------------
+Configure `.env` with your MySQL and Elasticsearch credentials.
 
-To upgrade LibrePIM to a newer version, please follow the Akeneo upgrade guide:
-https://docs.akeneo.com/master/migrate_pim/index.html
+Then run:
 
-LibrePIM maintains compatibility with Akeneo PIM upgrades, so you can use the official Akeneo upgrade instructions.
+```
+NO_DOCKER=true make
+```
 
-Changelog
----------
-You can check out the changelog files in https://github.com/libre-pim/librepim-dev.
+For more details, refer to the Akeneo installation guide:
+[https://docs.akeneo.com/master/install_pim](https://docs.akeneo.com/master/install_pim)
 
-### Support & Community
+---
 
-- **Development Repository**: https://github.com/libre-pim/librepim-dev
-- **Issue Tracker**: https://github.com/libre-pim/librepim-dev/issues
-- **Standard Edition**: https://github.com/libre-pim/librepim-standard
+# **Migrating from Akeneo PIM Community Edition**
 
-### License
+LibrePIM maintains compatibility with Akeneo PIM CE, allowing for a smooth migration.
+A migration guide will be available in the documentation.
 
-LibrePIM is licensed under the Open Software License 3.0 (OSL-3.0). See LICENCE.txt for more information.
+---
 
-### About Akeneo
+# **Upgrade Instructions**
 
-LibrePIM is a fork of Akeneo PIM Community Edition. For more information about Akeneo, visit https://www.akeneo.com/
+LibrePIM currently follows the Akeneo CE upgrade workflow.
+
+For upgrade details, see:
+[https://docs.akeneo.com/master/migrate_pim/index.html](https://docs.akeneo.com/master/migrate_pim/index.html)
+
+---
+
+# **Changelog**
+
+You can view the changelog here:
+[https://github.com/libre-pim/librepim-dev](https://github.com/libre-pim/librepim-dev)
+
+---
+
+# **Support & Community**
+
+* **Development Repository:** [https://github.com/libre-pim/librepim-dev](https://github.com/libre-pim/librepim-dev)
+* **Issue Tracker:** [https://github.com/libre-pim/librepim-dev/issues](https://github.com/libre-pim/librepim-dev/issues)
+* **Standard Edition:** [https://github.com/libre-pim/librepim-standard](https://github.com/libre-pim/librepim-standard)
+
+---
+
+# **License**
+
+LibrePIM is licensed under the **Open Software License 3.0 (OSL-3.0)**.
+See `LICENSE.txt` for details.
+
+---
+
+# **About Akeneo**
+
+LibrePIM is independently developed and originates from the openly licensed
+**Akeneo PIM Community Edition (OSL-3.0)**.
+
+For more information about Akeneo, visit:
+[https://www.akeneo.com/](https://www.akeneo.com/)
+ 
