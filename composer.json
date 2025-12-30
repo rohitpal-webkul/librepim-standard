@@ -1,5 +1,5 @@
 {
-  "name": "libre-pim/librepim-standard",
+  "name": "librepim/librepim-standard",
   "description": "LibrePIM - Community-Maintained Fork of the Akeneo PIM Community Edition | Security patches, bug fixes, performance improvements, and more.",
   "license": "OSL-3.0",
   "type": "project",
@@ -25,7 +25,7 @@
       "Pim\\Upgrade\\": "upgrades/"
     },
     "exclude-from-classmap": [
-      "vendor/libre-pim/librepim-dev/src/Kernel.php"
+      "vendor/librepim/librepim-dev/src/Kernel.php"
     ]
   },
   "require": {
