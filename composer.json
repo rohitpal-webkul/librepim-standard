@@ -46,7 +46,7 @@
       "vendor/librepim/librepim-dev/std-build/install-required-files.sh"
     ]
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "config": {
     "allow-plugins": {
       "symfony/flex": true
